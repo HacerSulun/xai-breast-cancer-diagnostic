@@ -47,13 +47,13 @@ The following plots were generated during the system benchmark to interpret mode
 
 This plot highlights which clinical features contribute most to the model's global decision-making process across the entire dataset.
 
-![Global Feature Importance](global_feature_importance.png)
+![Global Feature Importance](shap_global_summary.png)
 
 ### 2. Patient-Specific Local Explanation (Waterfall Plot)
 
 This chart provides a single-patient clinical workflow, showing how individual feature measurements shift the diagnostic prediction away from or toward a malignant classification.
 
-![SHAP Waterfall Plot](shap_waterfall_plot.png)
+![SHAP Waterfall Plot](shap_local_waterfall.png)
 
 ---
 
