@@ -21,14 +21,16 @@ class XAIManager:
         
     def generate_waterfall_plot(self, shap_values, sample_index=0, class_index=1):
         """Tek bir hasta için yerel şelale grafiğini üretir."""
-        fig, ax = plt.subplots(figsize=(10, 6))
+        # Çakışmaları önlemek için her seferinde yeni ve temiz bir figür nesnesi oluşturuyoruz
+        fig = plt.figure(figsize=(10, 6))
         
-        # SHAP çıktı formatı model türüne göre (2D veya 3D) değişebilir, bunu standartlaştırıyoruz
         if len(shap_values.shape) == 3:
             shap_values_class = shap_values[:, :, class_index]
         else:
             shap_values_class = shap_values
             
+        # Matplotlib eksenini doğrudan SHAP'a teslim ediyoruz
         shap.plots.waterfall(shap_values_class[sample_index], show=False)
+        
         plt.tight_layout()
         return fig
