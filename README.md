@@ -1,5 +1,7 @@
 # 🩺 Multi-Model Clinical Diagnostic Benchmark & XAI Portal
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://hacersulun-xai-breast-cancer-diagnostic-app-nu0syb.streamlit.app/)
+
 A production-ready machine learning, benchmarking, and explainability pipeline that evaluates diverse model architectures (Tree-based vs. Linear) on the **Breast Cancer Wisconsin** dataset and leverages **SHAP (SHapley Additive exPlanations)** to deliver transparent, interpretable clinical insights.
 
 ---
